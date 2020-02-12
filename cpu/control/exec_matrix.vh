@@ -2480,7 +2480,7 @@ if (~use_ixiy & pla[74] & pla[55]) begin
                     ctl_alu_op1_sel_bus=1; /* Internal bus */
                     ctl_ir_we=1; end
     if (M4 & T2) begin fMRead=1; end
-    if (M4 & T3) begin fMRead=1; nextM=1; ctl_mWrite=1;
+    if (M4 & T3) begin fMRead=1;
                     ctl_sw_2d=1;
                     ctl_sw_1d=1;
                     ctl_bus_db_oe=1; /* Read DB pads to internal data bus */
@@ -2489,8 +2489,7 @@ if (~use_ixiy & pla[74] & pla[55]) begin
                     ctl_alu_op1_sel_bus=1; /* Internal bus */
                     ctl_alu_op_low=1; /* Activate ALU operation on low nibble */
                     ctl_alu_core_R=1; ctl_alu_core_V=1; ctl_alu_core_S=1; ctl_flags_cf_set=1; ctl_flags_cf_cpl=1; end
-    if (M5 & T1) begin fMWrite=1;
-                    ctl_bus_inc_oe=1; /* Output enable incrementer to the register bus */
+    if (M4 & T4) begin nextM=1; ctl_mWrite=1;
                     ctl_sw_2u=1;
                     ctl_sw_1u=1;
                     ctl_bus_db_we=1; /* Write DB pads with internal data bus value */
@@ -2498,6 +2497,8 @@ if (~use_ixiy & pla[74] & pla[55]) begin
                     ctl_alu_res_oe=1; /* Result latch */
                     ctl_alu_sel_op2_high=1; /* Activate ALU operation on high nibble */
                     ctl_alu_core_R=1; ctl_alu_core_V=1; ctl_alu_core_S=1; ctl_flags_cf_set=1; ctl_flags_cf_cpl=1; end
+    if (M5 & T1) begin fMWrite=1;
+                    ctl_bus_inc_oe=1; /* Output enable incrementer to the register bus */ end
     if (M5 & T2) begin fMWrite=1; end
     if (M5 & T3) begin fMWrite=1; setM1=1; end
 end
@@ -2612,7 +2613,7 @@ if (~use_ixiy & pla[73] & pla[55]) begin
                     ctl_alu_op1_sel_bus=1; /* Internal bus */
                     ctl_ir_we=1; end
     if (M4 & T2) begin fMRead=1; end
-    if (M4 & T3) begin fMRead=1; nextM=1; ctl_mWrite=1;
+    if (M4 & T3) begin fMRead=1;
                     ctl_sw_2d=1;
                     ctl_sw_1d=1;
                     ctl_bus_db_oe=1; /* Read DB pads to internal data bus */
@@ -2621,8 +2622,7 @@ if (~use_ixiy & pla[73] & pla[55]) begin
                     ctl_alu_op1_sel_bus=1; /* Internal bus */
                     ctl_alu_op_low=1; /* Activate ALU operation on low nibble */
                     ctl_alu_core_S=1; ctl_flags_cf_set=1; ctl_alu_sel_op2_neg=1; end
-    if (M5 & T1) begin fMWrite=1;
-                    ctl_bus_inc_oe=1; /* Output enable incrementer to the register bus */
+    if (M4 & T4) begin nextM=1; ctl_mWrite=1;
                     ctl_sw_2u=1;
                     ctl_sw_1u=1;
                     ctl_bus_db_we=1; /* Write DB pads with internal data bus value */
@@ -2630,6 +2630,8 @@ if (~use_ixiy & pla[73] & pla[55]) begin
                     ctl_alu_res_oe=1; /* Result latch */
                     ctl_alu_sel_op2_high=1; /* Activate ALU operation on high nibble */
                     ctl_alu_core_S=1; ctl_flags_cf_set=1; ctl_alu_sel_op2_neg=1; end
+    if (M5 & T1) begin fMWrite=1;
+                    ctl_bus_inc_oe=1; /* Output enable incrementer to the register bus */ end
     if (M5 & T2) begin fMWrite=1; end
     if (M5 & T3) begin fMWrite=1; setM1=1; end
 end
