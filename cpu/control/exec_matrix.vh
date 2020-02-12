@@ -2039,7 +2039,8 @@ if (~use_ixiy & pla[70] & pla[55]) begin
                     ctl_bus_db_oe=1; /* Read DB pads to internal data bus */
                     ctl_ir_we=1; end
     if (M4 & T2) begin fMRead=1; end
-    if (M4 & T3) begin fMRead=1; nextM=1; ctl_mWrite=1;
+    if (M4 & T3) begin fMRead=1; end
+    if (M4 & T4) begin nextM=1; ctl_mWrite=1;
                     ctl_sw_2d=1;
                     ctl_sw_1d=1;
                     ctl_bus_db_oe=1; /* Read DB pads to internal data bus */
