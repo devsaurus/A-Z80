@@ -1,3 +1,16 @@
+//----------------------------------------------------------------------------
+//  A-Z80 CPU Copyright (C) 2014,2018  Goran Devic, www.baltazarstudios.com
+//
+//  This program is free software; you can redistribute it and/or modify it
+//  under the terms of the GNU General Public License as published by the Free
+//  Software Foundation; either version 2 of the License, or (at your option)
+//  any later version.
+//
+//  This program is distributed in the hope that it will be useful, but WITHOUT
+//  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+//  more details.
+//----------------------------------------------------------------------------
 // Copyright (C) 1991-2013 Altera Corporation
 // Your use of Altera Corporation's design tools, logic functions 
 // and other software and tools, and its AMPP partner logic 
@@ -65,7 +78,7 @@ assign	SYNTHESIZED_WIRE_7 = T3 | T2;
 
 assign	bus_db_pin_oe = SYNTHESIZED_WIRE_0 | SYNTHESIZED_WIRE_1;
 
-assign	SYNTHESIZED_WIRE_3 = T3 & fIORead;
+assign	SYNTHESIZED_WIRE_3 = T4 & fIORead;
 
 assign	bus_db_pin_re = SYNTHESIZED_WIRE_2 | SYNTHESIZED_WIRE_3 | SYNTHESIZED_WIRE_4;
 
