@@ -2657,7 +2657,7 @@ if (pla[37] & ~pla[28]) begin
     if (M3 & T1) begin fIORead=1;
                     ctl_reg_gp_sel=`GP_REG_AF; ctl_reg_gp_hilo=2'b10; ctl_sw_4d=1; /* Read 8-bit general purpose A register, enable SW4 downstream */
                     ctl_al_we=1; /* Write a value from the register bus to the address latch */ /* Which register to be written is decided elsewhere */
-                    ctl_reg_in_hi=1; ctl_reg_in_lo=1; /* From the ALU side into the register file */
+                    ctl_reg_in_lo=1; /* From the ALU side into the register file low byte only */
                     ctl_sw_1d=1;
                     ctl_bus_db_oe=1; /* Read DB pads to internal data bus */ end
     if (M3 & T2) begin fIORead=1; end

@@ -3947,7 +3947,6 @@ ctl_reg_gp_hilo_pla37npla28M3T1_3 = (pla[37]&~pla[28])&(M3&T1);
 ctl_reg_gp_hilo = ctl_reg_gp_hilo | ({ctl_reg_gp_hilo_pla37npla28M3T1_3,ctl_reg_gp_hilo_pla37npla28M3T1_3})&(2'b10);
 ctl_sw_4d = ctl_sw_4d | (pla[37]&~pla[28])&(M3&T1);
 ctl_al_we = ctl_al_we | (pla[37]&~pla[28])&(M3&T1);
-ctl_reg_in_hi = ctl_reg_in_hi | (pla[37]&~pla[28])&(M3&T1);
 ctl_reg_in_lo = ctl_reg_in_lo | (pla[37]&~pla[28])&(M3&T1);
 ctl_sw_1d = ctl_sw_1d | (pla[37]&~pla[28])&(M3&T1);
 ctl_bus_db_oe = ctl_bus_db_oe | (pla[37]&~pla[28])&(M3&T1);

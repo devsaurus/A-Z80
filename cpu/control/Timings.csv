@@ -796,7 +796,7 @@ A-Z80 Timing Table	M_	T_	Function	valid	nextM	setM1	A:reg rd	A:reg wr	inc/dec	A:
 #005H T5  AB:001 DB:--	2	1	fMRead				PC			W																								
 #006H T6  AB:001 DB:01          MREQ RD	2	2	fMRead					PC	+	R																								
 #007H T7  AB:001 DB:01          MREQ RD	2	3	fMRead		ior																													
-#008H T8  AB:001 DB:--	3	1	fIORead				A			W		?	<		<	R																		
+#008H T8  AB:001 DB:--	3	1	fIORead				A			W		?	<l		<	R																		
 #009H T9  AB:001 DB:--               RD    IORQ	3	2	fIORead																															
 #010H T10 AB:001 DB:--               RD    IORQ	3	3	fIORead																															
 #011H T11 AB:001 DB:--               RD    IORQ	3	4	fIORead			Y																												
