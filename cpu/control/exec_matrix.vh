@@ -2751,7 +2751,7 @@ if (pla[27] & pla[34]) begin
         if (op4 & op5 & ~op3) begin ctl_bus_zero_oe=1; end  /* Trying to read flags? Put 0 on the bus instead. */
         if (~(op4 & op5 & ~op3)) begin ctl_reg_gp_sel=op54; ctl_reg_gp_hilo={~rsel3,rsel3}; end /* Read 8-bit GP register */
                     ctl_reg_out_hi=~rsel3; ctl_reg_out_lo=rsel3; ctl_sw_2u=~rsel3; ctl_sw_2d=rsel3; /* Enable register gate based on the rsel3 */ /* Controlled by register gate */
-                    ctl_sw_1u=1;
+        if (~(op4 & op5 & ~op3)) begin ctl_sw_1u=1; end /* Upstream only if db0 is not driven from elsewhere */
                     ctl_bus_db_we=1; /* Write DB pads with internal data bus value */ end
     if (M2 & T1) begin fIOWrite=1;
                     ctl_reg_gp_sel=`GP_REG_BC; ctl_reg_gp_hilo=2'b11; ctl_sw_4d=1; /* Read 16-bit BC, enable SW4 downstream */

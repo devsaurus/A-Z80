@@ -167,6 +167,8 @@ u       ctl_sw_2u=1;
 :SW1
 <       ctl_sw_1d=1;
 >       ctl_sw_1u=1;
+>r8' \  // r8 addressing does not allow reading F register, some instructions generate all-0 on db0
+        if (~(op4 & op5 & ~op3)) begin ctl_sw_1u=1; end // Upstream only if db0 is not driven elsewhere
 
 //-----------------------------------------------------------------------------------------
 // Data bus latches and pads control
