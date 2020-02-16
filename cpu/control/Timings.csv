@@ -622,7 +622,8 @@ A-Z80 Timing Table	M_	T_	Function	valid	nextM	setM1	A:reg rd	A:reg wr	inc/dec	A:
 																																		
 #017H T13 AB:000 DB:--	4	1	fMRead				WZ			W						R																	OpcodeToIR	...continues here from the (ix+d) addressing mode
 #018H T14 AB:000 DB:DD          MREQ RD	4	2	fMRead																															
-#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead		mw									d	<	R	alu	>s1		bus	bus	L	OR						0		W.sh			
+#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead																															
+#01AH T16 AB:000 DB:--	4	4			mw									d	<	R	alu	>s1		bus	bus	L	OR						0		W.sh			
 #029H T17 AB:002 DB:--	5	1	fMWrite							R				u	>	W	alu	<	res			H	OR		*	*	*	P	0	*				
 #030H T18 AB:002 DB:BB          MREQ	5	2	fMWrite																															
 #031H T19 AB:002 DB:BB          MREQ    WR	5	3	fMWrite			Y																												
@@ -722,7 +723,8 @@ A-Z80 Timing Table	M_	T_	Function	valid	nextM	setM1	A:reg rd	A:reg wr	inc/dec	A:
 																																		
 #017H T13 AB:000 DB:--	4	1	fMRead				WZ			W						R		>bs		bus	bus												OpcodeToIR	...continues here from the (ix+d) addressing mode
 #018H T14 AB:000 DB:DD          MREQ RD	4	2	fMRead																															
-#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead		mw									d	<	R	alu	>s0			bus	L	OR											
+#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead																															
+#01AH T16 AB:000 DB:--	4	4			mw									d	<	R	alu	>s0			bus	L	OR											
 #029H T17 AB:002 DB:--	5	1	fMWrite							R				u	>	W		<	res			H	OR											
 #030H T18 AB:002 DB:BB          MREQ	5	2	fMWrite																															
 #031H T19 AB:002 DB:BB          MREQ    WR	5	3	fMWrite			Y																												
@@ -758,7 +760,8 @@ A-Z80 Timing Table	M_	T_	Function	valid	nextM	setM1	A:reg rd	A:reg wr	inc/dec	A:
 																																		
 #017H T13 AB:000 DB:--	4	1	fMRead				WZ			W						R		>bs		bus	bus												OpcodeToIR	...continues here from the (ix+d) addressing mode
 #018H T14 AB:000 DB:DD          MREQ RD	4	2	fMRead																															
-#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead		mw									d	<	R	alu	>s0			bus	L	NAND											
+#019H T15 AB:000 DB:DD          MREQ RD	4	3	fMRead																															
+#01AH T16 AB:000 DB:--	4	4			mw									d	<	R	alu	>s0			bus	L	NAND											
 #029H T17 AB:002 DB:--	5	1	fMWrite							R				u	>	W		<	res			H	NAND											
 #030H T18 AB:002 DB:BB          MREQ	5	2	fMWrite																															
 #031H T19 AB:002 DB:BB          MREQ    WR	5	3	fMWrite			Y																												
